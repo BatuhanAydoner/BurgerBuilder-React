@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import "./BurgerIngredient.css";
 import PropTypes from "prop-types";
 
 class BurgerIngredient extends Component {
@@ -30,14 +31,11 @@ class BurgerIngredient extends Component {
         ingredient = <div className="Salad"></div>;
         break;
       default:
+        ingredient = null;
         break;
     }
-    return;
+    return ingredient;
   }
 }
-
-BurgerIngredient.prototype = {
-  type: PropTypes.string.isRequired,
-};
 
 export default BurgerIngredient;
